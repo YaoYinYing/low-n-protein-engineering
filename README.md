@@ -5,6 +5,20 @@ This repository contains a complete, open-source, end-to-end re-implementation o
 Each in silico step in the protein engineering pipeline has a jupyter notebook that will execute that step as well as an individual README file. The pipeline steps have been broken down as follows:
 
 1. Training UniRep: either use the weights provided by the [Church lab](https://github.com/churchlab/UniRep) or use the JAX-unirep reimplementation to re-train from scratch, which is well documented [here](https://github.com/ElArkk/jax-unirep)
+```shell
+pip install awscli
+
+cd <repo-path>
+mkdir weights;
+cd weights;
+
+w=(1900_weights/ 256_weights/ 64_weights/ 1900_weights_random/ 256_weights_random/ 64_weights_random/ evotuned/unirep/ evotuned/random_init/)
+for i in ${w[*]};
+do 
+    echo $i;
+    aws s3 sync --no-sign-request s3://unirep-public/$i $i;
+done
+```
 2. Generate input file of characterized mutants: [seq_mutator](https://github.com/ivanjayapurna/low-n-protein-engineering/tree/master/seq_mutator)
 3. Curating pre-training set for evotuning: [pre-evotuning](https://github.com/ivanjayapurna/low-n-protein-engineering/tree/master/pre-evotuning)
 4. Evotuning: we pushed an [example script](https://github.com/ElArkk/jax-unirep/blob/master/examples/evotuning.py) to the jax-unirep repo.
