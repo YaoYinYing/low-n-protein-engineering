@@ -14,3 +14,6 @@ analysis/inputs/
 analysis/outputs/
 Pipfile
 Pipfile.lock
+data/results/report/blast_890.fasta_program-blastp_db-nr_hitnum-5000.xml
+data/results/report/blast_890.fasta_program-tblastn_db-nt_hitnum-20000.xml
+download_interpro.py
