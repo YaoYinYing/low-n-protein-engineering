@@ -20,7 +20,7 @@ pkgs_dirs:
   - $HOME/.conda/pkgs" > $HOME/.condarc
 
 conda_env=low-n-p450
-conda create -n $conda_env
+conda create -y -n $conda_env
 conda activate $conda_env
 conda install -y jupyter
 
