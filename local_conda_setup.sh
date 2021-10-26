@@ -41,7 +41,7 @@ pip install nbconvert==5.6.1
 conda install -y -c conda-forge openmm==7.5.1 cudnn==8.2.1.32 cudatoolkit==11.4.2 pdbfixer==1.7
 conda install -y -c bioconda hmmer==3.3.2 hhsuite==3.3.0 kalign2==2.04
 pip install --upgrade jax jaxlib==0.1.72+cuda111 -f https://storage.googleapis.com/jax-releases/jax_releases.html
-
+conda install -y feather-format -c conda-forge
 
 git clone https://github.com/YaoYinYing/low-n-protein-engineering
 cd low-n-protein-engineering
