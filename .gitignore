@@ -17,3 +17,7 @@ Pipfile.lock
 data/results/report/blast_890.fasta_program-blastp_db-nr_hitnum-5000.xml
 data/results/report/blast_890.fasta_program-tblastn_db-nt_hitnum-20000.xml
 download_interpro.py
+old_notebook/Low-N_engineering_direct_evolution.ipynb
+old_notebook/Low-N_engineering_direct_evolution_colab.ipynb
+old_notebook/Low-N_engineering_local.ipynb
+old_notebook/Low_N_engineering_test_2.ipynb
